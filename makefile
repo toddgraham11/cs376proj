@@ -1,8 +1,12 @@
-prog: main.o readLine.o execCmds.o two.o 
-	gcc -o prog main.o readLine.o execCmds.o two.o
+
+prog: main.o readLine.o execCmds.o two.o figueira.o 
+	gcc -o prog main.o readLine.o execCmds.o two.o figueira.o
 
 main.o: main.c readLine.h execCmds.h two.h
 	gcc -c main.c
+
+figueira.o: figueira.c figueira.h
+	gcc -c figueira.c
 
 readLine.o: readLine.c readLine.h
 	gcc -c readLine.c
